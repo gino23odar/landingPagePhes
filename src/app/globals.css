@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --clr-bluegreen: #f2f1ef;
+  --clr-navyblue: #97bcc7;
+  --clr-concretewhite: #006884;
+  --clr-teal: #053d57;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --clr-bluegreen: #006884;
+    --clr-navyblue: #053d57;
+    --clr-concretewhite: #f2f1ef;
+    --clr-teal: #97bcc7;
+
+
+  }
+
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-bluegreen);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
