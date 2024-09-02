@@ -9,7 +9,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav aria-label='main navigation' className='bg-concretewhite text-slate-950 p-2 w-[90%] overflow-hidden rounded-b-xl mb-4'> 
+    <nav aria-label='main navigation' className='bg-navyblue text-slate-950 p-2 w-[96%] rounded-b-xl mb-4 shadow shadow-slate-950'> 
       <ul className='flex flex-col justify-between'>
         <div className='flex flex-col items-center justify-between'>
           <NameLogo />

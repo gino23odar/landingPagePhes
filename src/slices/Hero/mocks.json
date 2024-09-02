@@ -1,0 +1,40 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"business_title": {
+				"__TYPE__": "FieldContent",
+				"value": "brain",
+				"type": "Text"
+			},
+			"slogan": {
+				"__TYPE__": "FieldContent",
+				"value": "east",
+				"type": "Text"
+			},
+			"hero_image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+					"width": 6597,
+					"height": 4398
+				},
+				"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?rect=0%2C0%2C6597%2C4398&w=2736&h=1824",
+				"width": 2736,
+				"height": 1824,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]
