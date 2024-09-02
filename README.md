@@ -1,4 +1,4 @@
-# Landing Page Grupo V&B
+# Landing Page PHES
 
 ## 🚀 Features
 **Responsive Design**: Optimized for all devices - desktops, tablets, and mobiles.  
