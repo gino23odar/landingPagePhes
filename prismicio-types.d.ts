@@ -4,7 +4,10 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomepageDocumentDataSlicesSlice = CtacomponentSlice | HeroSlice;
+type HomepageDocumentDataSlicesSlice =
+  | ContactSlice
+  | CtacomponentSlice
+  | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -70,6 +73,71 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = HomepageDocument;
+
+/**
+ * Primary content in *Contact → Default → Primary*
+ */
+export interface ContactSliceDefaultPrimary {
+  /**
+   * Title field in *Contact → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Contact Label field in *Contact → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.contact_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  contact_label: prismic.KeyTextField;
+
+  /**
+   * Mascot field in *Contact → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  label: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Contact Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Contact*
+ */
+type ContactSliceVariation = ContactSliceDefault;
+
+/**
+ * Contact Shared Slice
+ *
+ * - **API ID**: `contact`
+ * - **Description**: Contact
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactSlice = prismic.SharedSlice<
+  "contact",
+  ContactSliceVariation
+>;
 
 /**
  * Primary content in *Ctacomponent → Default → Primary*
@@ -212,6 +280,10 @@ declare module "@prismicio/client" {
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      ContactSlice,
+      ContactSliceDefaultPrimary,
+      ContactSliceVariation,
+      ContactSliceDefault,
       CtacomponentSlice,
       CtacomponentSliceDefaultPrimary,
       CtacomponentSliceVariation,
