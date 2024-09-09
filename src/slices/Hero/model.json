@@ -31,8 +31,8 @@
           "config": {
             "label": "Hero Image",
             "constraint": {
-              "width": 2736,
-              "height": 1824
+              "width": 1200,
+              "height": 400
             },
             "thumbnails": []
           }

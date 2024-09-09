@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type HomepageDocumentDataSlicesSlice =
+  | ServiciosSlice
   | ContactSlice
   | CtacomponentSlice
   | HeroSlice;
@@ -266,6 +267,98 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Item in *Servicios → Default → Primary → Servicio*
+ */
+export interface ServiciosSliceDefaultPrimaryServicioItem {
+  /**
+   * Nombre field in *Servicios → Default → Primary → Servicio*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servicios.default.primary.servicio[].nombre
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nombre: prismic.KeyTextField;
+
+  /**
+   * Descripcion field in *Servicios → Default → Primary → Servicio*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servicios.default.primary.servicio[].descripcion
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descripcion: prismic.RichTextField;
+
+  /**
+   * Imagen field in *Servicios → Default → Primary → Servicio*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servicios.default.primary.servicio[].imagen
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagen: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *Servicios → Default → Primary*
+ */
+export interface ServiciosSliceDefaultPrimary {
+  /**
+   * Titulo field in *Servicios → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servicios.default.primary.titulo
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  titulo: prismic.KeyTextField;
+
+  /**
+   * Servicio field in *Servicios → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servicios.default.primary.servicio[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  servicio: prismic.GroupField<
+    Simplify<ServiciosSliceDefaultPrimaryServicioItem>
+  >;
+}
+
+/**
+ * Default variation for Servicios Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServiciosSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ServiciosSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Servicios*
+ */
+type ServiciosSliceVariation = ServiciosSliceDefault;
+
+/**
+ * Servicios Shared Slice
+ *
+ * - **API ID**: `servicios`
+ * - **Description**: Servicios
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServiciosSlice = prismic.SharedSlice<
+  "servicios",
+  ServiciosSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -292,6 +385,11 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ServiciosSlice,
+      ServiciosSliceDefaultPrimaryServicioItem,
+      ServiciosSliceDefaultPrimary,
+      ServiciosSliceVariation,
+      ServiciosSliceDefault,
     };
   }
 }
