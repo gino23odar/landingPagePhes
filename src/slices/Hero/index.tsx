@@ -22,7 +22,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="flex justify-center w-full mb-6"
     >
-      <div className='relative flex justify-start items-start w-[96%] bg-teal lg:min-h-[15lvh] xl:min-h-[30lvh] rounded-3xl p-8 text-slate-950 overflow-hidden'>
+      <div className='relative flex justify-start items-start w-[96%] bg-teal lg:min-h-[15lvh] xl:min-h-[20lvh] rounded-3xl p-8 text-slate-950 overflow-hidden'>
         <div className="flex justify-start items-start z-10 text-bold text-concretewhite bg-bluegreen bg-opacity-75 rounded-xl p-2">
           <div className="flex items-center gap-1">
             <h1 className="text-3xl lg:text-7xl">

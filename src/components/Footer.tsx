@@ -38,7 +38,7 @@ const FooterLink = () =>{
         </div>
       </div>
       <div className="text-center mt-10">
-        <p className="text-bold">© 2024 Grupo V&B. Todos los derechos reservados.</p>
+        <p className="text-bold">© 2024 PHES. Todos los derechos reservados.</p>
       </div>
     </div>
   )
