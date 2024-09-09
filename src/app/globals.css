@@ -45,7 +45,7 @@ body {
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
   box-sizing: border-box;
-  padding: 16px 20px;
+  padding: 16px 10px;
   color: #fff;
   font-size: 12px;
   font-weight: 600;
@@ -71,5 +71,95 @@ body {
 
   100% {
     box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
+
+.outer{
+  animation: outer 2s linear infinite;
+}
+
+@keyframes outer {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.middle{
+  animation: middle 2s linear infinite;
+}
+
+@keyframes middle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.middle2{
+  animation: middle2 2s linear infinite;
+}
+
+@keyframes middle2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-360deg);
+  }
+
+  100% {
+    transform: rotate(-720deg);
+  }
+}
+
+.inner{
+  animation: inner 2s linear infinite;
+}
+
+@keyframes inner {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.inner2{
+  animation: inner2 2s linear infinite;
+}
+
+@keyframes inner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

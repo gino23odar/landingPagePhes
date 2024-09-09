@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(roboto.className, "flex flex-col items-center min-h-screen text-concretewhite" )}>
-      <div className="pointer-events-none fixed inset-0 -z-40 h-full w-full bg-[url('/textures/grainy13.png')] dark:bg-[url('/textures/backgroundBricks.webp')] opacity-20 mix-blend-soft-light"></div>  
+      <div className="pointer-events-none fixed inset-0 -z-40 h-full w-full bg-[url('/textures/backgroundBricks.webp')] opacity-20 mix-blend-soft-light"></div>  
         <NavBar />
         {children}
         <Footer />
