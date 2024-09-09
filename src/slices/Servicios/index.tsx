@@ -14,6 +14,7 @@ const Servicios = ({ slice }: ServiciosProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="flex w-full justify-center items-center bg-concretewhite text-slate-950"
     >
       Placeholder component for servicios (variation: {slice.variation}) Slices
     </section>

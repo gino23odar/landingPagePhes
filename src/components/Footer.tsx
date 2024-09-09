@@ -52,7 +52,7 @@ const Footer = () => {
               <div className='flex old:flex-row flex-col items-center justify-evenly overflow-hidden '>
                 {/* <a src={logo} alt="logo" width={} className='object-contain block' /> */}
                 <h2 className='flex flex-grow h-full items-center justify-center text-center font-bold bg-gray-500 p-5 old:p-8 old:rounded-r-lg'>
-                  Grupo V&B
+                  PHES
                 </h2>
               </div>
               
