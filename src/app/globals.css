@@ -163,3 +163,36 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* servicios */
+
+.card{
+  width: 20%;
+  transition: width 0.4s cubic-bezier(.8,-0.3,.02,1.32);
+}
+
+.card .image{
+  transition: transform 0.4s ease;
+}
+
+.card:hover{
+  width: 100%;
+}
+
+.card:hover .image{
+  transform: scale(1.25)
+}
+
+.card .background{
+  opacity:0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .background{
+  opacity:1;
+}
+
+.card .layer{
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  
+}

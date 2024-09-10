@@ -22,9 +22,9 @@ const Ctacomponent = ({ slice }: CtacomponentProps): JSX.Element => {
         <div className="pointer-events-none absolute inset-0 z-0 h-full w-full bg-[url('/textures/stone.jpg')] opacity-60 mix-blend-hard-light"></div>
         <div className="flex justify-center items-center w-[80%] p-4 xl:p-0">
           <div className="outer flex justify-center items-center border-2 border-navyblue aspect-square shadow-comic p-6">
-            <div className="middle flex justify-center items-center border-2 border-teal aspect-square p-4">
-              <div className="middle2 flex justify-center items-center border-2 border-teal aspect-square p-3">
-                  <div className="inner flex justify-center items-center border-2 border-bluegreen aspect-square shadow-comic p-px">
+            <div className="middle flex justify-center items-center border-2 border-teal aspect-square rounded-3xl p-4">
+              <div className="middle2 flex justify-center items-center border-2 border-teal aspect-square rounded-3xl p-3">
+                  <div className="inner flex justify-center items-center border-2 border-bluegreen aspect-square shadow-comic rounded-full p-px overflow-hidden">
                     <Ctabutton />
                   </div>
               </div>
