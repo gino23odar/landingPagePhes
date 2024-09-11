@@ -1,0 +1,80 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"titulo": {
+				"__TYPE__": "FieldContent",
+				"value": "stems",
+				"type": "Text"
+			},
+			"testimonio": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"nombre",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "spirit",
+									"type": "Text"
+								}
+							],
+							[
+								"imagen",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+										"width": 3344,
+										"height": 2509
+									},
+									"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+									"width": 3344,
+									"height": 2509,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"comentario",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Cillum officia ex proident et esse ullamco aute ullamco laborum enim commodo in occaecat minim anim. Veniam culpa voluptate pariatur ea ex enim nulla labore nulla ullamco adipisicing aliquip."
+											}
+										}
+									]
+								}
+							],
+							[
+								"calificacion",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "given",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

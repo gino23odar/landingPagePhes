@@ -18,7 +18,7 @@ const Servicios = ({ slice }: ServiciosProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="flex flex-col w-full justify-center items-center bg-concretewhite text-slate-950"
     >
-      <div className="text-3xl mt-2">
+      <div className="text-3xl font-bold mt-2">
         {slice.primary.titulo}
       </div>
       <div className="flex flex-row w-full gap-4 p-8">

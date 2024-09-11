@@ -16,7 +16,7 @@ const Ctacomponent = ({ slice }: CtacomponentProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="flex justify-center items-center w-full min-h-[40lvh] mb-4"
+      className="flex justify-center items-center w-full min-h-[40lvh] mb-6"
     >
       <div className="flex flex-col xl:flex-row justify-end items-center bg-concretewhite w-[80%] min-h-[40lvh] rounded-2xl mx-8 overflow-hidden relative">
         <div className="pointer-events-none absolute inset-0 z-0 h-full w-full bg-[url('/textures/stone.jpg')] opacity-60 mix-blend-hard-light"></div>
