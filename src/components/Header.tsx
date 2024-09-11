@@ -1,11 +1,15 @@
 import React from 'react'
+import { createClient } from '@/prismicio';
 
-const Header = () => {
+import NavBar from '@/components/NavBar';
+
+export default async function Header() {
+  const client = createClient();
+  const settings = await client.getSingle("settings");
+  
   return (
-    <div className='flex justify-center items-center w-full min-h-[20lvh] bg-teal p-4 mb-2'>
-      hi
-    </div>
-  )
+    <header className="top-0 z-50 mx-8 w-[96%] md:sticky md:top-px">
+      <NavBar settings={settings} />
+    </header>
+  );
 }
-
-export default Header

@@ -19,6 +19,7 @@ const config: Config = {
         "navyblue": "#053d57",
         "concretewhite": "#f2f1ef",
         "teal": "#97bcc7",
+        "realred": "#DD5B87"
       },
       boxShadow: {
         'comic': '20px 20px 10px -10px rgba(0, 0, 0, 0.9)',

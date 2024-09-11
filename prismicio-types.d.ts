@@ -74,7 +74,84 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomepageDocument;
+/**
+ * Item in *Settings → Nav Item*
+ */
+export interface SettingsDocumentDataNavItemItem {
+  /**
+   * Nav Link field in *Settings → Nav Item*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.nav_item[].nav_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  nav_link: prismic.LinkField;
+
+  /**
+   * Nav Label field in *Settings → Nav Item*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.nav_item[].nav_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nav_label: prismic.KeyTextField;
+}
+
+/**
+ * Content for Settings documents
+ */
+interface SettingsDocumentData {
+  /**
+   * Nav Item field in *Settings*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.nav_item[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  nav_item: prismic.GroupField<Simplify<SettingsDocumentDataNavItemItem>> /**
+   * Meta Title field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.meta_title
+   * - **Tab**: SEO and Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Settings*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.meta_description
+   * - **Tab**: SEO and Metadata
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  meta_description: prismic.RichTextField;
+}
+
+/**
+ * Settings document from Prismic
+ *
+ * - **API ID**: `settings`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SettingsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<SettingsDocumentData>,
+    "settings",
+    Lang
+  >;
+
+export type AllDocumentTypes = HomepageDocument | SettingsDocument;
 
 /**
  * Primary content in *Contact → Default → Primary*
@@ -475,6 +552,9 @@ declare module "@prismicio/client" {
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      SettingsDocument,
+      SettingsDocumentData,
+      SettingsDocumentDataNavItemItem,
       AllDocumentTypes,
       ContactSlice,
       ContactSliceDefaultPrimary,
