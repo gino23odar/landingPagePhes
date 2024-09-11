@@ -11,6 +11,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "testimonios": {
+              "type": "SharedSlice"
+            },
             "servicios": {
               "type": "SharedSlice"
             },

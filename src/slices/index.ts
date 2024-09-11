@@ -7,4 +7,5 @@ export const components = {
   ctacomponent: dynamic(() => import("./Ctacomponent")),
   hero: dynamic(() => import("./Hero")),
   servicios: dynamic(() => import("./Servicios")),
+  testimonios: dynamic(() => import("./Testimonios")),
 };

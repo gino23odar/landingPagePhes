@@ -19,19 +19,21 @@
             "placeholder": ""
           }
         },
-        "contact_label": {
-          "type": "Text",
-          "config": {
-            "label": "Contact Label",
-            "placeholder": ""
-          }
-        },
         "label": {
           "type": "Image",
           "config": {
             "label": "Mascot",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "mensaje_contacto": {
+          "type": "StructuredText",
+          "config": {
+            "label": "mensaje contacto",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },

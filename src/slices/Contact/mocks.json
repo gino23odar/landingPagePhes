@@ -8,13 +8,7 @@
 				"value": "young",
 				"type": "Text"
 			},
-			"contact_label": {
-				"__TYPE__": "FieldContent",
-				"value": "explain",
-				"type": "Text"
-			},
 			"label": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
@@ -32,7 +26,21 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"mensaje_contacto": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consectetur culpa consequat excepteur minim laborum ad fugiat dolor. Consequat dolor enim laboris sint qui duis anim."
+						}
+					}
+				]
 			}
 		},
 		"items": []

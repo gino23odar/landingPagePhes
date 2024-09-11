@@ -38,30 +38,27 @@ const ContactForm = () => {
       }
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-        {success && <div className="text-green-500">Recibimos tu consulta!</div>}
-        {failure && <div className="text-red-500">Lo sentimos, hubo un error.</div>}
-        <div>
-            <h2>Contacto</h2>
-            <div className="flex">
-                <label>Nombre</label>
-                <input type="text" name="name" required />
-            </div>
-            <div className="flex">
-                <label>Email</label>
-                <input type="email" name="user_email" className='rounded-md text-black p-2' pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required />
-            </div>
-            <div className="flex">
-                <label>Telefono</label>
-                <input type="text" name="phone" pattern="\d{1,9}$" />
-            </div>
-            <div className="flex">
-                <label>Consulta</label>
-                <textarea name="consulta" required />
-            </div>
-        </div>
-
-    </form>
+    <div className='flex'>
+      <form ref={form} onSubmit={sendEmail}>
+          {success && <div className="text-green-500">Recibimos tu consulta!</div>}
+          {failure && <div className="text-red-500">Lo sentimos, hubo un error.</div>}
+          <ul className="wrapper">
+            <li style={{ '--i': 5 }} >
+              <input className="input" type="text" placeholder="Nombre" required/>
+            </li>
+            <li style={{ '--i': 4 }}>
+              <input className="input" placeholder="Telefono" name="phone"/>
+            </li>
+            <li style={{ '--i': 3 }}>
+              <input className="input" type="email" placeholder="E-mail" name="email" required />
+            </li >
+            <li style={{ '--i': 2 }}>
+              <input className="input" type="textarea" placeholder="Consulta" name="consulta" required />
+            </li >
+            <button style={{ '--i': 1 }} className='envio-btn'>Enviar</button>
+          </ul>
+      </form>
+    </div>
   )
 }
 
