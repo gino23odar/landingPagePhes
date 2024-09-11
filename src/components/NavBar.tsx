@@ -17,7 +17,7 @@ const NavBar = ({
   const pathname = usePathname();
 
   return (
-    <nav aria-label='main navigation' className='bg-navyblue text-slate-950 px-2 pb-2 w-full rounded-b-xl mb-4 shadow shadow-slate-950'> 
+    <nav aria-label='main navigation' className='bg-navyblue text-slate-950 p-2  w-full rounded-b-xl mb-4 shadow shadow-slate-950'> 
       <ul className='flex flex-col justify-between'>
         <div className='flex flex-col items-center justify-between'>
           <button 
