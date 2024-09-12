@@ -41,6 +41,46 @@
           "placeholder": ""
         }
       },
+      "imagen1": {
+        "type": "Image",
+        "config": {
+          "label": "Imagen1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "imagen2": {
+        "type": "Image",
+        "config": {
+          "label": "Imagen2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "imagen3": {
+        "type": "Image",
+        "config": {
+          "label": "Imagen3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "imagen4": {
+        "type": "Image",
+        "config": {
+          "label": "Imagen4",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "imagen5": {
+        "type": "Image",
+        "config": {
+          "label": "Imagen5",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

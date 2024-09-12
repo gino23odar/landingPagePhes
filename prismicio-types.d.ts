@@ -186,6 +186,61 @@ interface PropiedadPostDocumentData {
   distrito: prismic.KeyTextField;
 
   /**
+   * Imagen1 field in *Propiedad Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.imagen1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagen1: prismic.ImageField<never>;
+
+  /**
+   * Imagen2 field in *Propiedad Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.imagen2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagen2: prismic.ImageField<never>;
+
+  /**
+   * Imagen3 field in *Propiedad Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.imagen3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagen3: prismic.ImageField<never>;
+
+  /**
+   * Imagen4 field in *Propiedad Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.imagen4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagen4: prismic.ImageField<never>;
+
+  /**
+   * Imagen5 field in *Propiedad Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.imagen5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagen5: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Propiedad Post*
    *
    * - **Field Type**: Slice Zone

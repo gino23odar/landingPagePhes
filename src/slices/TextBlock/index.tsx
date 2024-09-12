@@ -15,6 +15,7 @@ const TextBlock = ({ slice }: TextBlockProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="flex flex-col justify-center items-center w-full"
     >
       <PrismicRichText field={slice.primary.descripcion} />
     </section>
