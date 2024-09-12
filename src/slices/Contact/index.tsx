@@ -17,6 +17,7 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
         className="flex justify-center items-center relative w-full min-h-[40lvh] py-4 mb-4"
+        id="contacto"
       >
         <div className="banner-gradient flex flex-col justify-center items-center w-full p-8 min-h-[38lvh] text-black overflow-hidden">
           <div className="flex xl:absolute left-0 lg:right-20 xl:right-44 w-44 sm:w-60 lg:w-80">

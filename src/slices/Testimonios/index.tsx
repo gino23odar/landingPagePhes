@@ -18,6 +18,7 @@ const Testimonios = ({ slice }: TestimoniosProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="flex flex-col justify-center items-center w-full min-h-[40lvh] mb-4" 
+      id="testimonios"
     >
       <h2 className="text-3xl mb-4">{slice.primary.titulo}</h2>
       <div className="flex flex-row gap-6">
