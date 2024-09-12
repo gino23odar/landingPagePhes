@@ -23,7 +23,7 @@ const NavBar = ({
           <button 
             aria-expanded={open}
             aria-label="Menu abierto"
-            className="block p-2 text-2xl text-slate-950 md:hidden"
+            className="block p-2 text-2xl text-slate-950 xl:hidden"
             onClick={() => setOpen(true)}
           >
             <span>Open</span>
@@ -109,7 +109,7 @@ const DesktopMenu = ({
   pathname: string;
 }) => {
   return (
-    <div className='relative flex-row justify-between items-center gap-2 bg-transparent py-2 px-4 z-50 hidden md:flex'>
+    <div className='relative flex-row justify-between items-center gap-2 bg-transparent py-2 px-4 z-50 hidden xl:flex'>
       <NameLogo />
       <ul className='flex flex-row items-center w-full sm:w-[60%] justify-around'>
         {settings.data.nav_item.map(({ nav_link, nav_label }, index) => (

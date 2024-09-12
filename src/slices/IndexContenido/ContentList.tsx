@@ -42,21 +42,21 @@ export default function ContentList({
 
       return(
         <>
-            <ul>
+            <ul className="flex flex-wrap justify-center items-center gap-8">
                 {items.map((post,index) => (
-                    <li key={index}>
-                        <div className="flex flex-col lg:flex-row justify-between items-center bg-concretewhite border-8 border-navyblue text-slate-950 rounded-lg py-4 px-12">
+                    <li key={index} className="w-[90%]">
+                        <div className="flex flex-col lg:flex-row justify-between items-center w-[96%] bg-concretewhite border-8 border-navyblue text-slate-950 rounded-lg py-4 px-12">
                             <div className="flex flex-col justify-center items-center w-full">
                                 <span className="text-3xl font-bold text-slate-950">{post.data.title}</span>
                                 <div className="flex flex-row">    
                                     {post.tags.map((tag, index) => (
-                                        <span key={index} className="text-lg font-bold bg-realred rounded-md p-2 ml-2">
+                                        <span key={index} className="flex text-lg font-bold items-center bg-realred rounded-md p-2 ml-2 ">
                                         {tag}
                                         </span>
                                     ))}
                                 </div>
                             </div>
-                            <a href={`/propiedades/${post.uid}`}>
+                            <a href={`/propiedades/${post.uid}`} className="hover:cursor-pointer">
                              <div className="flex flex-col items-end">
                                 <div className="rounded-lg bg-center w-[200px] h-[140px] overflow-hidden">
                                     <PrismicNextImage field={post.data.hover_image} className=""/>

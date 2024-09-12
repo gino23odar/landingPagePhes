@@ -21,7 +21,7 @@ const IndexContenido = async ({ slice }: IndexContenidoProps): Promise<JSX.Eleme
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="flex flex-col w-full px-10"
+      className="flex flex-col w-full px-4 lg:px-10"
     >
       <div className="flex flex-col w-full text-xl font-semibold">
         <h1 className="text-3xl font-extrabold mb-2">{slice.primary.title}</h1>
