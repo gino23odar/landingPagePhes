@@ -8,7 +8,7 @@ export default async function Header() {
   const settings = await client.getSingle("settings");
   
   return (
-    <header className="top-0 z-50 mx-8 w-[96%] md:sticky md:top-px">
+    <header className="top-0 z-50 mx-8 w-[96%] md:sticky">
       <NavBar settings={settings} />
     </header>
   );

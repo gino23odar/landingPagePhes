@@ -50,7 +50,7 @@ export default function ContentList({
                                 <span className="text-3xl font-bold text-slate-950">{post.data.title}</span>
                                 <div className="flex flex-row">    
                                     {post.tags.map((tag, index) => (
-                                        <span key={index} className="flex text-lg font-bold items-center bg-realred rounded-md p-2 ml-2 ">
+                                        <span key={index} className="flex text-lg font-bold items-center bg-bluegreen text-concretewhite rounded-md p-2 ml-2 ">
                                         {tag}
                                         </span>
                                     ))}
