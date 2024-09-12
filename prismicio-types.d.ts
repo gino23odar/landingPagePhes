@@ -74,6 +74,165 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
+type PageDocumentDataSlicesSlice = IndexContenidoSlice;
+
+/**
+ * Content for Page documents
+ */
+interface PageDocumentData {
+  /**
+   * Slice Zone field in *Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+   * Meta Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Page document from Prismic
+ *
+ * - **API ID**: `page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+
+type PropiedadPostDocumentDataSlicesSlice = TextBlockSlice;
+
+/**
+ * Content for Propiedad Post documents
+ */
+interface PropiedadPostDocumentData {
+  /**
+   * Title field in *Propiedad Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Publicacion field in *Propiedad Post*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.publicacion
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  publicacion: prismic.DateField;
+
+  /**
+   * Hover Image field in *Propiedad Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.hover_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hover_image: prismic.ImageField<never>;
+
+  /**
+   * Slice Zone field in *Propiedad Post*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PropiedadPostDocumentDataSlicesSlice> /**
+   * Meta Title field in *Propiedad Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: propiedad_post.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Propiedad Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: propiedad_post.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Propiedad Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Propiedad Post document from Prismic
+ *
+ * - **API ID**: `propiedad_post`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PropiedadPostDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<PropiedadPostDocumentData>,
+    "propiedad_post",
+    Lang
+  >;
+
 /**
  * Item in *Settings → Nav Item*
  */
@@ -151,7 +310,11 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomepageDocument | SettingsDocument;
+export type AllDocumentTypes =
+  | HomepageDocument
+  | PageDocument
+  | PropiedadPostDocument
+  | SettingsDocument;
 
 /**
  * Primary content in *Contact → Default → Primary*
@@ -344,6 +507,81 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *IndexContenido → Default → Primary*
+ */
+export interface IndexContenidoSliceDefaultPrimary {
+  /**
+   * Title field in *IndexContenido → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: index_contenido.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Descripcion field in *IndexContenido → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: index_contenido.default.primary.descripcion
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descripcion: prismic.RichTextField;
+
+  /**
+   * Default Image field in *IndexContenido → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: index_contenido.default.primary.default_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  default_image: prismic.ImageField<never>;
+
+  /**
+   * Ver Mas field in *IndexContenido → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: index_contenido.default.primary.ver_mas
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ver_mas: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for IndexContenido Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IndexContenidoSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<IndexContenidoSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *IndexContenido*
+ */
+type IndexContenidoSliceVariation = IndexContenidoSliceDefault;
+
+/**
+ * IndexContenido Shared Slice
+ *
+ * - **API ID**: `index_contenido`
+ * - **Description**: IndexContenido
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IndexContenidoSlice = prismic.SharedSlice<
+  "index_contenido",
+  IndexContenidoSliceVariation
+>;
 
 /**
  * Item in *Servicios → Default → Primary → Servicio*
@@ -539,6 +777,36 @@ export type TestimoniosSlice = prismic.SharedSlice<
   TestimoniosSliceVariation
 >;
 
+/**
+ * Default variation for TextBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *TextBlock*
+ */
+type TextBlockSliceVariation = TextBlockSliceDefault;
+
+/**
+ * TextBlock Shared Slice
+ *
+ * - **API ID**: `text_block`
+ * - **Description**: TextBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextBlockSlice = prismic.SharedSlice<
+  "text_block",
+  TextBlockSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -552,6 +820,12 @@ declare module "@prismicio/client" {
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      PageDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
+      PropiedadPostDocument,
+      PropiedadPostDocumentData,
+      PropiedadPostDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       SettingsDocumentDataNavItemItem,
@@ -568,6 +842,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      IndexContenidoSlice,
+      IndexContenidoSliceDefaultPrimary,
+      IndexContenidoSliceVariation,
+      IndexContenidoSliceDefault,
       ServiciosSlice,
       ServiciosSliceDefaultPrimaryServicioItem,
       ServiciosSliceDefaultPrimary,
@@ -578,6 +856,9 @@ declare module "@prismicio/client" {
       TestimoniosSliceDefaultPrimary,
       TestimoniosSliceVariation,
       TestimoniosSliceDefault,
+      TextBlockSlice,
+      TextBlockSliceVariation,
+      TextBlockSliceDefault,
     };
   }
 }
