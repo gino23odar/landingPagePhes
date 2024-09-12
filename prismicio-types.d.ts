@@ -175,6 +175,17 @@ interface PropiedadPostDocumentData {
   hover_image: prismic.ImageField<never>;
 
   /**
+   * Distrito field in *Propiedad Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: propiedad_post.distrito
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  distrito: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *Propiedad Post*
    *
    * - **Field Type**: Slice Zone
@@ -778,6 +789,21 @@ export type TestimoniosSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *TextBlock → Default → Primary*
+ */
+export interface TextBlockSliceDefaultPrimary {
+  /**
+   * Descripcion field in *TextBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_block.default.primary.descripcion
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descripcion: prismic.RichTextField;
+}
+
+/**
  * Default variation for TextBlock Slice
  *
  * - **API ID**: `default`
@@ -786,7 +812,7 @@ export type TestimoniosSlice = prismic.SharedSlice<
  */
 export type TextBlockSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<TextBlockSliceDefaultPrimary>,
   never
 >;
 
@@ -857,6 +883,7 @@ declare module "@prismicio/client" {
       TestimoniosSliceVariation,
       TestimoniosSliceDefault,
       TextBlockSlice,
+      TextBlockSliceDefaultPrimary,
       TextBlockSliceVariation,
       TextBlockSliceDefault,
     };

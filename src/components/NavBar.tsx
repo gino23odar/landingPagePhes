@@ -128,7 +128,7 @@ const DesktopMenu = ({
                   className={clsx(
                     "absolute inset-0 z-0 h-full rounded bg-realred transition-transform  duration-300 ease-in-out group-hover:translate-x-0",
                     pathname.includes(asLink(nav_link) as string)
-                      ? "translate-x-20"
+                      ? "translate-x-40"
                       : "translate-x-40",
                   )}
                 />

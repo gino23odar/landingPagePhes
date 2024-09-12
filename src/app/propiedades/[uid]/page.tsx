@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
-import { components } from "@/slices";
+import PropiedadBody from "@/components/PropiedadBody";
 
 type Params = { uid: string };
 
@@ -13,7 +12,7 @@ export default async function Page({ params }: { params: Params }) {
     .getByUID("propiedad_post", params.uid)
     .catch(() => notFound());
 
-  return <SliceZone slices={page.data.slices} components={components} />;
+  return <PropiedadBody page={page} />;
 }
 
 export async function generateMetadata({
