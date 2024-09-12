@@ -6,7 +6,9 @@ import { Content, KeyTextField, asLink } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
 import { usePathname } from "next/navigation";
 
-import clsx from 'clsx'
+import clsx from 'clsx';
+import { GiSplitCross } from "react-icons/gi";
+import { CgShapeZigzag } from "react-icons/cg";
 
 const NavBar = ({
   settings,
@@ -26,7 +28,9 @@ const NavBar = ({
             className="block p-2 text-2xl text-slate-950 xl:hidden"
             onClick={() => setOpen(true)}
           >
-            <span>Open</span>
+            <span className='menu-span'></span>
+            <span className='menu-span'></span>
+            <span className='menu-span'></span>
           </button>
         </div>
         <div
@@ -41,7 +45,7 @@ const NavBar = ({
             className="fixed right-4 top-3 block p-2 text-2xl dark:text-slate-800 text-slate-50"
             onClick={() => setOpen(false)}
           >
-            Close
+            <GiSplitCross />
           </button>
           {settings.data.nav_item.map(({ nav_link, nav_label }, index) => (
             <React.Fragment key={nav_label}>
@@ -60,9 +64,9 @@ const NavBar = ({
                 >
                   <span
                     className={clsx(
-                      "absolute inset-0 z-0 h-full translate-y-12 rounded bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0",
+                      "absolute inset-0 z-0 h-full translate-y-12 rounded bg-realred transition-transform duration-300 ease-in-out group-hover:translate-y-0",
                       pathname.includes(asLink(nav_link) as string)
-                        ? "translate-y-6"
+                        ? "translate-y-10"
                         : "translate-y-18",
                     )}
                   />
@@ -71,10 +75,10 @@ const NavBar = ({
               </li>
               {index < settings.data.nav_item.length - 1 && (
                 <span
-                  className="hidden text-4xl font-thin leading-[0] text-slate-400 md:inline"
+                  className="inline text-4xl font-thin leading-[0] text-slate-950 md:hidden"
                   aria-hidden="true"
                 >
-                  --
+                  <CgShapeZigzag />
                 </span>
               )}
             </React.Fragment>
