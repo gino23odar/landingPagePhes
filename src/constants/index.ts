@@ -7,8 +7,8 @@ export const socialMedia = [
     },
     {
       id: "social-media-2",
-      icon: "twitter",
-      link: "https://www.twitter.com/1",
+      icon: "facebook",
+      link: "https://www.facebook.com",
     },
   ];
 

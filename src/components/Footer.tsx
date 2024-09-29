@@ -51,9 +51,8 @@ const Footer = () => {
             <div className="w-full flex justify-around items-center md:flex-row flex-col p-6 border-t-[1px] border-t-[#3F3E45] rounded-lg">
               <div className='flex old:flex-row flex-col items-center justify-evenly overflow-hidden '>
                 {/* <a src={logo} alt="logo" width={} className='object-contain block' /> */}
-                <h2 className='flex flex-grow h-full items-center justify-center text-center font-bold bg-gray-500 p-5 old:p-8 old:rounded-r-lg'>
-                  PHES
-                </h2>
+                
+                <img src='/pheslogoSQ.png' alt="LOGO PHES" className='h-40 w-auto rounded-full'  />
               </div>
               
               {/* <div className='flex flex-grow justify-between 2xl:justify-end p-6'>
@@ -72,7 +71,7 @@ const Footer = () => {
                             <img
                               src={`/logos/${social.icon}.svg`}
                               alt={social.id}
-                              className={`w-[47px] h-[45px] object-contain cursor-pointer svg-color`}
+                              className={`w-[60px] h-[60px] object-contain cursor-pointer svg-color`}
                             />
                           </a>
                         </div> 
