@@ -19,7 +19,7 @@ const NavBar = ({
   const pathname = usePathname();
 
   return (
-    <nav aria-label='main navigation' className='bg-navyblue text-slate-950 p-2  w-full rounded-b-xl mb-4 shadow shadow-slate-950'> 
+    <nav aria-label='main navigation' className='bg-titlecolor text-slate-950 p-2  w-full rounded-b-xl mb-4 shadow shadow-slate-950'> 
       <ul className='flex flex-col justify-between'>
         <div className='flex flex-col items-center justify-between'>
           <button 
@@ -97,9 +97,12 @@ const NameLogo = () => {
       aria-label="Inicio"
       className="text-xl font-extrabold tracking-tighter text-concretewhite"
     >
-      <div className='flex justify-center items-center'>
-        {/* LOGO */}
-        <p className='text-2xl font-bold'>PHES</p>
+
+      <div className='flex justify-center items-center gap-4'>
+        <div className='flex justify-center items-center rounded-full overflow-hidden'>
+          <img src='/pheslogoSQ.png' alt="LOGO PHES" className='h-20 w-auto'  />
+        </div>
+        <p className='text-3xl'>PROYECTO PHES</p>
       </div>
     </Link>
   )

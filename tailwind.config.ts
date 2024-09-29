@@ -16,10 +16,11 @@ const config: Config = {
       },
       colors:{
         "bluegreen": "#006884",
-        "navyblue": "#053d57",
+        "navyblue": "#053225",
         "concretewhite": "#f2f1ef",
         "teal": "#97bcc7",
-        "realred": "#DD5B87"
+        "realred": "#DD5B87",
+        "titlecolor": "#053225",
       },
       boxShadow: {
         'comic': '20px 20px 10px -10px rgba(0, 0, 0, 0.9)',

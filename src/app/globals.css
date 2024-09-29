@@ -7,7 +7,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --clr-bluegreen: #006884;
+  --clr-bluegreen: #31C48D;
     --clr-navyblue: #053d57;
     --clr-concretewhite: #eeece8;
     --clr-teal: #97bcc7;
@@ -39,7 +39,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--clr-realred);
+  background: var(--clr-bluegreen);
   min-width: 200px;
   border: 0;
   border-radius: 4px;

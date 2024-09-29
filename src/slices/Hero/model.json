@@ -36,6 +36,14 @@
             },
             "thumbnails": []
           }
+        },
+        "business_logo": {
+          "type": "Image",
+          "config": {
+            "label": "Business Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}

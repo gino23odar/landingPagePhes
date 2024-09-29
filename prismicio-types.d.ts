@@ -545,6 +545,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   hero_image: prismic.ImageField<never>;
+
+  /**
+   * Business Logo field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.business_logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  business_logo: prismic.ImageField<never>;
 }
 
 /**

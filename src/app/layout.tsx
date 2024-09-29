@@ -9,8 +9,8 @@ import Header from "@/components/Header";
 const roboto = Roboto({ weight:"400", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Grupo V&B",
-  description: "Venta de materiales de construccion",
+  title: "PHES",
+  description: "Ventas de immuebles y servicios immobiliarios",
 };
 
 export default function RootLayout({
