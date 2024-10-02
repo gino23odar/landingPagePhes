@@ -26,10 +26,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <div className="flex justify-start items-start z-10 text-bold text-concretewhite bg-bluegreen bg-opacity-75 rounded-xl p-2">
           <div className="flex items-center gap-1">
             <h1 className="text-3xl lg:text-7xl">
-              <PrismicNextImage field={slice.primary.business_logo} className="h-32 w-auto"/>
+              <PrismicNextImage field={slice.primary.business_logo} className="h-24 md:h-32 w-30 md:w-auto"/>
             </h1>
             <div className="flex flex-col items-start gap-1">
-              <p className="text-4xl text-bold self-end">
+              <p className="text-2xl md:text-4xl text-bold self-end">
                 {slice.primary.slogan}
               </p>
               

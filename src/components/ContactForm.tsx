@@ -44,16 +44,16 @@ const ContactForm = () => {
           {failure && <div className="text-red-500">Lo sentimos, hubo un error.</div>}
           <ul className="wrapper">
             <li style={{ '--i': 5 }} >
-              <input className="input" type="text" placeholder="Nombre" required/>
+              <input className="input" type="text" placeholder="Nombre" name="user_name" required/>
             </li>
             <li style={{ '--i': 4 }}>
-              <input className="input" placeholder="Telefono" name="phone"/>
+              <input className="input" placeholder="Telefono" name="user_contact"/>
             </li>
             <li style={{ '--i': 3 }}>
-              <input className="input" type="email" placeholder="E-mail" name="email" required />
+              <input className="input" type="email" placeholder="E-mail" name="user_email" required />
             </li >
             <li style={{ '--i': 2 }}>
-              <input className="input" type="textarea" placeholder="Consulta" name="consulta" required />
+              <input className="input" type="textarea" placeholder="Consulta" name="message" required />
             </li >
             <button style={{ '--i': 1 }} className='envio-btn'>Enviar</button>
           </ul>

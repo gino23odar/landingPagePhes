@@ -12,6 +12,7 @@
     --clr-concretewhite: #eeece8;
     --clr-teal: #97bcc7;
     --clr-realred: #DD5B87;
+    --clr-titlecolor: #053225;
 
 }
 
@@ -206,7 +207,7 @@ body {
 }
 
 .envio-btn {
-  background: var(--clr-navyblue);
+  background: var(--clr-titlecolor);
   border: none;
 }
 
@@ -227,7 +228,7 @@ body {
 .wrapper li::before, .envio-btn::before {
   position: absolute;
   content: '';
-  background: var(--clr-navyblue);
+  background: var(--clr-titlecolor);
   top: 0;
   left: -40px;
   width: 40px;
@@ -251,19 +252,19 @@ body {
 }
 
 .wrapper li:nth-child(1)::after, .wrapper li:nth-child(1)::before {
-  background-color: var(--clr-teal);
-}
-
-.wrapper li:nth-child(2)::after, .wrapper li:nth-child(2)::before {
-  background-color: #4c899b;
-}
-
-.wrapper li:nth-child(3)::after, .wrapper li:nth-child(3)::before {
   background-color: var(--clr-bluegreen);
 }
 
+.wrapper li:nth-child(2)::after, .wrapper li:nth-child(2)::before {
+  background-color: #259C74 ;
+}
+
+.wrapper li:nth-child(3)::after, .wrapper li:nth-child(3)::before {
+  background-color: #1A7D5A ;
+}
+
 .wrapper li:nth-child(4)::after, .wrapper li:nth-child(4)::before {
-  background-color: #105372;
+  background-color: #0C503E ;
 }
 
 li .input {
@@ -277,25 +278,25 @@ li .input::placeholder {
 }
 
 li:nth-child(1) .input {
-  background: var(--clr-teal);
-}
-
-li:nth-child(2) .input {
-  background: #4c899b;
-}
-
-li:nth-child(3) .input {
   background: var(--clr-bluegreen);
 }
 
+li:nth-child(2) .input {
+  background: #259C74 ;
+}
+
+li:nth-child(3) .input {
+  background: #1A7D5A ;
+}
+
 li:nth-child(4) .input {
-  background: #105372;
+  background: #0C503E;
 }
 
 
 li:nth-child(1) .input:focus {
   outline: none;
-  border: 3.5px solid var(--clr-teal);
+  border: 3.5px solid var(--clr-bluegreen);
 }
 
 li:nth-child(2) .input:focus {
@@ -310,7 +311,7 @@ li:nth-child(3) .input:focus {
 
 li:nth-child(4) .input:focus {
   outline: none;
-  border: 3.5px solid #105372;
+  border: 3.5px solid #1d7eb6;
 }
 
 .wrapper li:hover, .envio-btn:hover {
@@ -318,7 +319,7 @@ li:nth-child(4) .input:focus {
 }
 
 .envio-btn:hover, .envio-btn:hover::before, .envio-btn:hover::after {
-  background: var(--clr-navyblue);
+  background: var(--clr-titlecolor);
 }
 
 .envio-btn:active {
